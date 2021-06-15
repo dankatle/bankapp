@@ -31,7 +31,6 @@ public class App {
     }
 
     private void checkName(HashSet<BankAccount> list) {
-        Scanner scanner = new Scanner(System.in);
         String tryName = scanner.nextLine();
         for (BankAccount checkUser : list) {
             if (checkUser.getHolder().equals(tryName)) {
@@ -47,7 +46,6 @@ public class App {
     }
 
     private void checkPassword(BankAccount bankAccount) {
-        Scanner scanner = new Scanner(System.in);
         String tryPassword = scanner.nextLine();
         while (!bankAccount.getPassword().equals(tryPassword)) {
             System.out.println("Пароль неверный");
@@ -62,7 +60,6 @@ public class App {
     }
 
     private void transferMoney(HashSet<BankAccount> list) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Напишите через пробел имя владельца счета и сумму перевода");
         String sum = scanner.nextLine();
         String[] mathExpression = sum.split(" ");
@@ -99,7 +96,6 @@ public class App {
     }
 
     private void addMoney(BankAccount bankAccount) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите сумму пополнения");
         double addMoneys = scanner.nextDouble();
         if (addMoneys > 0) {
